@@ -1,4 +1,3 @@
-import 'reflect-metadata';
 import express, { Request, Response } from 'express';
 import { validate } from 'class-validator';
 
@@ -13,7 +12,7 @@ dataSource
     app.use(express.json());
 
     // CREATE
-    app.post('/users/create', async (req: Request, res: Response) => {
+    app.post('/users', async (req: Request, res: Response) => {
       const { name, email, role } = req.body;
 
       try {
